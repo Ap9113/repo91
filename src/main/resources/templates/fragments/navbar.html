@@ -1,0 +1,12 @@
+<div class="navbar">
+  <a href="/products">Products</a>
+  <a href="/cart">Cart (<span th:text="${session.cart == null ? 0 : #numbers.sum(session.cart.values())}">0</span>)</a>
+  <span th:if="${#request.remoteUser != null}">
+    <span>Welcome, <b th:text="${#request.remoteUser}">User</b>!</span>
+    <a th:href="@{/logout}">Logout</a>
+  </span>
+  <span th:if="${#request.remoteUser == null}">
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  </span>
+</div>
