@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="container">
+  <h2>Thank you! Your order has been placed.</h2>
+  <p><a href="/products">Continue Shopping</a></p>
+</div>
+</body>
+</html>
